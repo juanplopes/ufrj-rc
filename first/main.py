@@ -15,14 +15,14 @@ g = load_graph("adjnoun.gml")
 
 def stats(it):
     it = list(it)
-    minn = float('Inf')
-    maxx = float('-Inf')
-    
-    for x in it:
-        minn = min(minn, x)
-        maxx = max(maxx, x)
-        
-    return {'min': minn, 'max': maxx, 'avg': numpy.average(it), 'stdev': numpy.std(it), 'count': len(it)}
+       
+    return {
+        'min': min(it), 
+        'max': max(it), 
+        'avg': numpy.average(it), 
+        'stdev': numpy.std(it), 
+        'count': len(it)
+    }
     
 def pairs(n, value):
     for i in range(n):
