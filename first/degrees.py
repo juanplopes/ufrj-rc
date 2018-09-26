@@ -1,10 +1,10 @@
 from graph_tool.all import *
-import numpy, collections
+import numpy, collections, sys
 
 #g = load_graph("power.gml")
 # Power grid: An undirected, unweighted network representing the topology of the Western States Power Grid of the United States. Data compiled by D. Watts and S. Strogatz and made available on the web here. Please cite D. J. Watts and S. H. Strogatz, Nature 393, 440-442 (1998).
 
-g = load_graph("company_edges.xml.gz")
+g = load_graph(sys.argv[1])
 #http://snap.stanford.edu/data/gemsec-Facebook.html
 
 #g = load_graph("email-Eu-core.xml.gz")
